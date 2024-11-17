@@ -1,0 +1,49 @@
+<!-- File: public/signup.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/styles/signup.css">
+</head>
+<body>
+<div class="auth-container">
+    <h1>Create Account</h1>
+    <form action="/auth/register" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" required>
+
+        <label for="secretPassword">Admin Password (optional):</label>
+        <input type="text" name="secretPassword" id="secretPassword">
+
+        <button type="submit">Register</button>
+    </form>
+    </form>
+    <form action="/auth/confirm-email" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="confirmationCode">Confirmation Code:</label>
+        <input type="text" name="confirmationCode" id="confirmationCode" required>
+
+        <button type="submit">Confirm Email</button>
+    </form>
+    <p>Already have an account? <a href="/auth/signin">Sign In</a></p>
+</div>
+
+</body>
+</html>
